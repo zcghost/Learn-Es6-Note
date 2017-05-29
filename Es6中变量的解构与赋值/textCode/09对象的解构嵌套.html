@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		      /*
+			  * 对象的解构与数组一样,同样可以用于嵌套结构的对象
+			  * 注意line是变量,loc和start都是模式,不会被赋值
+			  * 对象的解构也可以指定默认值
+			  * 默认值生效的条件是:对象的属性值严格等于undefined,导致默认值不会生效,如果解构失败,变量的值等于undefined
+			  * 
+			  *
+		      */
+		      var obj = {
+		      	  p:[
+		      	  	 "suibichuanji",
+		      	  	 {y:"itclan"}
+		      	  ]
+		      };
+		      var {p:[x,{y}]} = obj;
+		      var ExpObj = {
+		      	  loc:{
+		      	  	  start:{
+		      	  	  	 line:1,
+		      	  	  	 colum:4
+		      	  	  }
+		      	  }
+
+		      }
+		      var {loc:{start:{line}}} = ExpObj;
+		      // 下面是嵌套赋值的例子
+		      var obj = {};
+		      var arr = [];
+		      ({fun1:obj.proms1,fun2:arr[0]} = {fun1:234,fun2:false})
+		      // 对象的解构也可由指定的默认值
+		      let {w = 4} = {};
+		      let {e,r=5} = {e:1}
+		      // 默认值生效的条件是:对象的属性值严格等于undefined
+		      let {t:message="weclome to itclan public Number"} = {};
+		      let {u = 5} = {u:undefined}
+		      let {i = 4} = {x:null}
+		      console.log(x);            // suibichuanji
+		      console.log(y);            // itclan
+		      console.log(line);         // 1
+		      //console.log(loc);        // loc is not defined
+		      //console.log(start);      // start is not defined
+		      console.log(obj,arr);      // Object {proms1: 234} [false]
+		      console.log(w);            // 4
+		      console.log(e,r);          // 1 5
+		      console.log(message);      // weclome to itclan public Number
+		      console.log(u);            // 5
+		      console.log(i);            // 4
+
+
+
+
+
+		      
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

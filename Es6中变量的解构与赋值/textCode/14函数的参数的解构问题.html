@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+			 /*
+			 * 函数Result的参数指定默认值,而不是为变量x和y指定默认值,所以会得到与前面一种写法不同的结果
+			 *
+			 *
+			 */	 
+			 function result({x,y} = {x:0,y:0}){
+			 	return [x,y];
+			 }
+			 console.log(result({x:"suibichuanji",y:"itclan"}));
+			 console.log(result({x:22}));
+			 console.log(result({}));
+			 console.log(result());
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		     /*
+			 * 任何部署Interator(遍历)接口对象,都可以用for..of循环遍历,Map结构支持Interor接口,配合变量的解构赋值,获取键名和键值非常方便
+			 *  for..of可以循环一个数组，循环一个字符串,循环一个类型化数组，循环Map,循环一个Set,循环DOM,循环一个拥有enumerable属性对象，循环一个生成器,总之,它弥补了forEach()和for-in的不足,几乎是万能的,注意的它的写法
+		     */
+
+		     // 循环一个数组
+		     var arr = [1,2,3,4,5];
+		     for(var attr of arr){
+		     	 console.log(attr,typeof attr);
+		     }
+		     // 循环一个字符串
+		     var strNum = "itclan";
+		     for(var str of strNum ){
+		     	console.log(str,typeof str);
+		     }
+		     // 循环Map
+		     var map = new Map();  // 实例化对象
+		     console.log(map);     // 0
+		     map.set("随笔川迹","itclan");
+		     map.set("终结女神","陌上花开");
+		     console.log(map);     
+		     // for...of 
+		     for(let [key,value] of map){
+		     	console.log(key,":",value);
+		     }
+		     // 如果想获取键名
+		     for(let [key] of map){
+		     	console.log("键值名",":",key);
+		     }
+		     // 如果想获取键值
+		     for(let [,value] of map){
+		     	console.log("键值",":",value);
+		     }
+             // 循环Set
+             let iterable = new Set([1,1,2,2,3,3,4,4]);
+			 for (let value of iterable) {
+				  console.log(value,typeof value);
+			 }
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

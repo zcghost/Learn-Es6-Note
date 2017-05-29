@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		      /*
+			  *  函数参数的默认值
+			  *
+		      */
+		      // 函数声明
+		      function example1(x){
+		      	 var name;
+		      	 if(x == undefined){
+		      	 	name = "小美";
+		      	 }else{
+		      	 	name = x;
+		      	 }
+		      	 return x;
+		      }
+		      console.log(example1());       // undefined
+		      console.log(example1("川川")); // 川川
+		      // 解构赋值,指定函数声明时参数的默认值,就避免了在函数体内部在写重复多余的语句,判断了的,函数执行调用时,并没有实际参数,此时函数的返回值为函数形参设置时的默认值
+		      function example2({name="川川"}){
+		      	 return name;
+		      }
+		      console.log(example2({}));    
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

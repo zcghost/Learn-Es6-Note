@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		     /*
+			 * 对象的解构赋值
+			 * 解构不仅适用于数组,还可以用于对象
+			 * 注意:对象的解构与数组有一个重要的不同,数组的元素是按照次序排列的,变量的取值由它的位置决定,而对象的属性没有次序,变量必须与属性同名,才能取到正确的值
+			 * 1. 等号左边的变量与等号右边的两个同名属性不一致,但是对取值完全没有影响
+			 * 2. 变量没有对应的同名属性,导致取不到值,最后等于undefined
+			 * 3. 对象的解构赋值的内部机制,是先找到同名属性,然后再赋给对应的变量，真正被赋值的是后者,而不是前者
+			 * 
+		     */
+		     let {name,sex} = {name:"暖暖",sex:"妹子"}
+		     let {a,b,c,d} = {a:1,b:2,c:3,d:4}
+		     let {x,y,m,n} = {y:5,x:6,n:"cidy",m:"mini"};
+		     let {k} = {f:"fff",h:"hhh"}
+		     let {book:javascript} = {book:"锋利的jQuery",author:"xxx大神"};
+		     let obj = {firstName:"li",LastName:"shi"};
+		     let {firstName:f,LastName:L} =  obj; 
+		     let {var1:var1,var2:var2} = {var1:"aaa",var2:"bbb"}
+		     let {fun1:fun2} = {fun1:"AAA",fun2:"BBB"}
+		     console.log(name,sex);   //暖暖 妹子
+		     console.log(a,b,c,d);    //1 2 3 4
+		     console.log(x,y,m,n);    //6 5 "mini" "cidy"
+		     console.log(k);          //undefined
+		     console.log(javascript); //锋利的jQuery
+		     console.log(obj);     //Object {firstName: "li", LastName: "shi"}
+		     console.log(f,L);     //li shi
+		     console.log(var1,var2); // aaa bbb
+		     console.log(fun2);      // AAA
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

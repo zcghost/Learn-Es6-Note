@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+       
+
+       <script type="text/javascript">
+		   		 /*
+				 *  拓展运算符:
+				 *  1. 可以对一个数组进行拆分
+				 *	2. 它是基于那些有遍历接口的
+				 *	3. 拓展运算符:是三个点,它好比rest参数的逆运算,将一个数组转换为用逗号分割的参数序列,该运算符主要用于函数调用
+				 *
+		   		 */   
+		   		 let [first,...tail] = ["itclan",true,null,undefined,3,4,5];
+		   		 let [x,y,...z] = [1];
+		   		 let [,,,,last] = ["one","two","three","four","five"];
+		   		 console.log(first);    // itclan
+		   		 console.log(tail);     // true,null,undefined,3,4,5
+		   		 console.log(last);     // five
+		   		 console.log(x,y,z);    // 1 undefined []
+
+	   </script>
+</body>
+</html>

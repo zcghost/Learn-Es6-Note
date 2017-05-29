@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		    /*
+			* 解构赋值可以方便的将一组参数与变量名对应起来
+			* 三个点表示的是，拓展运算符,基于那些有遍历接口的,可以对一个数组进行拆分,它好比rest参数的逆运算,将一个数组转为用逗号分割的参数序列,主要运用于函数调用
+		    */
+		    // 参数是一组有次序的值
+		    function orderValue(arr){ 
+		    	console.log(...arr);
+		    }
+		    orderValue([1,2,3,4]);
+		    // 参数是一组无需的值,通过这种写法,很方便的提取json对象中想要的参数，这里提取的是a,b,c注意一点,若实参数多于形参数,上面形参数没有的话,它是会报错的
+		    function DisorderedValue({a,b,c,d}){
+        		console.log("name",a);
+        		console.log("微信公众号",c);
+        		console.log("特质",b);
+		    }
+		    DisorderedValue({a:"川川",c:"itclan",b:"全宇宙第一帅",d:"一个有温度的键盘侠"});
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

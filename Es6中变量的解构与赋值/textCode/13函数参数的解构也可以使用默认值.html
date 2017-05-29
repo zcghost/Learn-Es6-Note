@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+			  /*
+			  *  函数的参数的解构也可以使用默认值
+			  *  函数result的参数是一个对象,通过对这个对象进行解构,得到变量x和y的值,如果解构失败,则x和y等于默认值
+			  *
+			  */
+			  function result({x = 0,y = 0} = {}){
+			  	 return [x,y]; 
+			  }
+			  console.log(result({x:2,y:2})); // (2) [2, 2]
+			  console.log(result({x:4}));     // (2) [4, 0]
+			  console.log(result({}));        // (2) [0, 0]
+			  console.log(result());          // (2) [0, 0]
+			  
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

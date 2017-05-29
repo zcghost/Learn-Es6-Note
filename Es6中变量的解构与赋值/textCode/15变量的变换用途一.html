@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		       /*
+			   * 如何变换变量的值,两个变量实现交换
+			   * 过程:首先把a的值存入一个临时变量t中,然后b赋值给变量a,最后拿出临时变量中的a值赋值给b
+			   *
+		       */
+		       // 方法一:临时变量存储,第三个中间变量来解决
+		       var a = 10;
+		       var b = 20;
+		       var t;
+		       console.log("未使用临时变量变换之前a,b的值");
+		       console.log("a,b的值为",a,b);
+		       var t = a;
+		       a = b;
+		       b = t;
+		       console.log("使用临时变量后变换a,b的值为");
+		       console.log("a,b的值为",a,b);
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

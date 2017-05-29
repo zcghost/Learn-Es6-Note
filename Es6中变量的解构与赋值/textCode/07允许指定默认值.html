@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		      /*
+			  * 允许指定默认值
+			  * 注意:当等号右边的值为undefined时,是不会覆盖默认值的
+			  *
+		      */
+		      let [x,y,z = "itclan"] = [1,2]
+		      let [m,n,q = 0] = [3,4,5];
+		      let [foo = true] = [];
+		      let [j,k='b'] = ["123",undefined];
+		      let [l = 1,i = l] = [];
+		      let [w = 1,e = w] = [3];
+		      let [t = 1,b = t] = [4,5];
+		      //let [h = v,v = 2] = [];
+		      console.log(x,y,z);      // 1 2 "itclan"
+		      console.log(m,n,q);      // 3 4 5
+		      console.log(foo);        // true
+		      console.log(j,k);        // 123 b
+		      console.log(l,i);        // 1 1
+		      console.log(w,e);        // 3 3
+		      console.log(t,b);        // 4 5
+		      //console.log(h,v);v is not defined
+	</script>
+</head>
+<body>
+
+</body>
+</html>

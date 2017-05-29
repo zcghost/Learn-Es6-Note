@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+	          /*
+			  * 解构不成功,变量的值为undeined
+			  *
+	          */
+		      window.onload = function(){
+		      	  var [name] = [];
+		      	  var [age,sex] = ["随笔川迹"];
+		      	  var [book,author] = ["javascript框架设计","司徒大大","宅神","二次元"];
+		      	  var [x,[m],z] = [0,[1,2],3];
+		      	  console.log(name,age,sex,book,author,x,m,z);
+		      }
+	</script>
+</head>
+<body>
+
+</body>
+</html>

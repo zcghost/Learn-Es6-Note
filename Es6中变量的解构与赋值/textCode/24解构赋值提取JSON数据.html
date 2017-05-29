@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		     /*
+			 * 解构赋值对提取JSON对象中的数据是非常有用的
+			 * 可以快速的提取json数据的值
+			 *
+		     */
+		     var jsonData = {
+		     	 id:19931001,
+		     	 sex:"boy",
+		     	 single:true,
+		     	 data:["随笔川迹","itclan","全宇宙最帅没有之一"]
+		     }
+		     var {id,sex,single,data:info} = jsonData;
+		     console.log(id,sex,single,info);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

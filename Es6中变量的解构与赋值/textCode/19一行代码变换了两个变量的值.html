@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+	          /*
+			  * 一行代码变换搞定两个数值的交换
+			  * 根据运算符的优先级,首先执行将a赋值给b,这时候此时的b值直接得到了a的变量值,然后利用数组的索引让a得到了b的值
+	          */
+		      var a = 10;
+		      var b = 20;
+		      console.log("未变换之前a,b的值",a,b);
+		      a = [b,b=a][0];
+		      console.log("变换之后a,b的值为",a,b);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

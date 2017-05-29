@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+	          /*
+			  * 以下情况：不具备interator接口,和本身不具备interator接口,解构不成功
+			  *
+	          */
+		      window.onload = function(){
+		      	  let [x] = 2;
+		      	  let [y] = true;
+		      	  let [m] = NaN;
+		      	  let [n] = undefined;
+		      	  let [p] = null;
+		      	  let [o] = {};
+		      	  // Uncaught TypeError: undefined is not a function
+		      	 
+		      }
+	</script>
+</head>
+<body>
+
+</body>
+</html>

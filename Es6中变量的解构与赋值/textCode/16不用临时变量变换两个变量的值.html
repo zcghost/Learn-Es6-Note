@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		      /*
+			  * 不用临时变量变换,让其中一个变量变成一个a和b都有关系的值
+			  * 这样可以先改变另一个变量的值,最后改变原修改的变量值
+			  * 有些小学运算的感觉,但是要注意逻辑
+		      */
+		      var a = 10;
+		      var b = 20;
+		      console.log("未做运算变换之前a,b的值为",a,b);
+		      a = a+b;     // 10+20=30,此时a等于30
+		      b = a-b;     // 30-20=10;此时b等于10
+		      a = a-b;     // 30-10=20;此时a等于20
+		      console.log("使用运算变换之后a,b的值为",a,b);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		     /*
+			 * 函数的参数也可以解构赋值
+			 *
+		     */
+		     /*原始方法,传递数组*/
+		     var arr = [2,4];
+		     function multiply1(x,y){
+		     	return x*y;
+		     }
+             /*使用函数参数解构赋值*/
+		     function multiply2([x,y]){
+		     	return x*y;
+		     }
+		     console.log(multiply1(arr[0],arr[1]));    // 8
+		     console.log(multiply2([2,4]));            // 8
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		     /*
+			 * for循环,forEach(),for-in,Object.keys(),for-of五者比较
+		     */
+		     // for循环
+		     var arr = [1,2,3,4,5];
+		     console.log("arr的长度为",arr);
+		     for(var i = 0;i<arr.length;i++){
+		     	console.log("数组arr",[i],":",arr[i]);
+		     }
+		     // jsonData数据
+		     var jsonData = {
+		     	 name:"川川",
+		     	 job:"coder",
+		     	 hobby:"听书,阅读,写作"
+		     }
+		     console.log(jsonData.length);    // undefined
+		     
+		     // forEach循环遍历,Es5中内置的方法,但是不能中断循环,使用break语句和return语句
+		     arr.forEach(function(value){
+		     	 console.log(value);      // 1 2 3 4 5
+		     });
+		     
+		     // for-in循环,变量对象的属性,他不仅会遍历自定义属性还会遍历出原型下的属性,不推荐使用for-in来循环一个数组,因为,不像对象,数组更普通对象的属性不一样,是重要的序列值为指标的,for-in是用来循环带有字符串key的对象的方法
+		     for(var attr in jsonData){
+		     	 console.log("jsonData."+attr+"="+jsonData[attr]);
+		     }
+
+		     //Object.keys(),可以获取可枚举属性的名字
+		     var arrName = ["无名","雄霸","绝无神","聂风","步惊云"];
+		     var properties = Object.keys(arrName);
+		     var i,len = properties.length;
+		     for(var i = 0;i<len;i++){
+		     	 console.log("index:"+properties[i],"value:"+arrName[properties[i]]);
+		     }
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

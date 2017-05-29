@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		      /*
+			  * 变量的解构赋值作用之一
+			  * 返回一个对象
+			  *
+		      */
+		      function message(){
+		      	  return {name:"川川",age:24,weChatID:"itclan"}
+		      }
+		      var {name,age,weChatID} =  message();
+		      console.log(name,age,weChatID); // 川川 24 itclan
+		      console.log(message());   // 返回一个对象
+	</script>
+</head>
+<body>
+
+</body>
+</html>

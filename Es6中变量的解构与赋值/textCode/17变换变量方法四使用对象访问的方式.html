@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		     /*
+			 * 变换变量值方式
+			 * 把变量对象变成了一个对象,这个对象保存着该交换的键值对
+			 * 最后赋值就可以了的
+		     */
+		     var a = 10;
+		     var b = 20;
+		     console.log("未使用变量变换对象变量a,b的值为",a,b);
+		     a = { 
+		     	    a:b,
+		     	    b:a
+		         };
+		     b = a.b;
+		     a = a.a;
+		     console.log("使用对象保存该交换后变量a,b的值为",a,b);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
